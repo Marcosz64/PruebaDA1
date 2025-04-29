@@ -1,0 +1,38 @@
+# Dependencias
+/node_modules/
+
+# Salidas de build
+/dist/
+/build/
+
+# Archivos de logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Entornos
+.env
+.env.local
+.env.*.local
+
+# Configuración del editor
+.vscode/
+.idea/
+
+# Archivos de prueba y cobertura
+coverage/
+*.lcov
+
+# Archivos temporales
+*.tmp
+*.swp
+
+# Otros archivos comunes
+package-lock.json
+yarn.lock
+.pnpm-debug.log
