@@ -1,0 +1,20 @@
+{
+  "name": "pruebada1",
+  "version": "1.0.0",
+  "description": "Prueba ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marcosz64/PruebaDA1.git"
+  },
+  "author": "Marcos",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Marcosz64/PruebaDA1/issues"
+  },
+  "homepage": "https://github.com/Marcosz64/PruebaDA1#readme"
+}
