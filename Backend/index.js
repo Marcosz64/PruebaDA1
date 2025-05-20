@@ -1,6 +1,24 @@
-console.log("Hola mundo");
-console.log("Chau mundo");
-for (let i = 1; i <= 10; i++) {
-    console.log(`5 x ${i} = ${5 * i}`);
-    
-}
+import express from 'express';
+import { controllers } from './controllers/controllers.js';
+import { errorHandlerMiddleware } from './middlewares/error_handler_middleware.js';
+import { logMiddleware } from './middlewares/log.middleware.js';
+
+const app = express();
+const router = express.Router();
+app.use('/api',router); 
+router.use(express.json())
+router.use(logMiddleware)
+/*app.use(express.json());
+app.use(logMiddleware);*/
+
+controllers(router);
+
+app.use(errorHandlerMiddleware);
+
+const PORT = 3000;
+app.listen(
+    PORT,
+    ()=> {
+        console.log((`Servidor corriendo en http://localhost:${PORT}`));
+    }
+);
