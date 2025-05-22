@@ -4,16 +4,18 @@ import { errorHandlerMiddleware } from './middlewares/error_handler_middleware.j
 import { logMiddleware } from './middlewares/log.middleware.js';
 
 const app = express();
+
 const router = express.Router();
 app.use('/api',router); 
-router.use(express.json())
-router.use(logMiddleware)
+
+router.use(express.json());
+router.use(logMiddleware);
 /*app.use(express.json());
 app.use(logMiddleware);*/
 
 controllers(router);
 
-app.use(errorHandlerMiddleware);
+router.use(errorHandlerMiddleware);
 
 const PORT = 3000;
 app.listen(

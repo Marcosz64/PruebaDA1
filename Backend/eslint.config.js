@@ -6,6 +6,8 @@ export default[
         languageOptions:{
             ecmaVersion: 2020,
             globals: globals.browser,
+              ...globals.builtin,
+        ...globals.node,
             
         },
         rules: {
